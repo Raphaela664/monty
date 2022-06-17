@@ -25,7 +25,7 @@ extern var_t var;
 
 typedef struct stack_s
 {
-	int a;
+	int n;
 	struct stack_s *prev;
 	struct stack_s *next;
 } stack_t;
@@ -38,7 +38,7 @@ typedef struct instruction_s
 
 void get_op(char *op, stack_t **stack, unsigned int line_number);
 void m_push(stack_t **stack, unsigned int line_number);
-void m_push2(stack_t **stack, int a);
+void m_push2((stack_t **stack, int n);
 void m_pall(stack_t **stack, unsigned int line_number);
 void m_pint(stack_t **stack, unsigned int line_number);
 void m_pop(stack_t **stack, unsigned int line_number);

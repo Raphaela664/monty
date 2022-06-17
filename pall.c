@@ -9,7 +9,7 @@ void m_pall(stack_t **stack, unsigned int line_number)
 	head = *stack;
 	while (head != NULL)
 	{
-		printf("%d\n", head->a);
+		printf("%d\n", head->n);
 		head = head->next;
 		if (head == *stack)
 		{

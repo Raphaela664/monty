@@ -20,7 +20,7 @@ static int check_for_digit(char *arg)
 void m_push(stack_t **stack, unsigned int line_number)
 {
 	char *arg;
-	int a;
+	int n;
 
 	arg = strtok(NULL, "\n\t\r ");
 	if (arg == NULL || check_for_digit(arg))
@@ -30,8 +30,8 @@ void m_push(stack_t **stack, unsigned int line_number)
 			line_number);
 		exit(EXIT_FAILURE);
 	}
-	a = atoi(arg);
-	if (!add_node(stack, a))
+	n = atoi(arg);
+	if (!add_node(stack, n))
 	{
 		dprintf(STDOUT_FILENO, "Error: malloc failed\n");
 		exit(EXIT_FAILURE);
